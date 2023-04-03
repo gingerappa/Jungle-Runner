@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Checkpoint
   - Obstacle
+  - healthboost
+  - DamageBoost
+  - SpeedBoost
   layers:
   - Default
   - TransparentFX

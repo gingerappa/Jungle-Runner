@@ -48,7 +48,23 @@ public class TakeDamageScript : MonoBehaviour
         {
             CheckPointReached();
         }
+
         
+        if (collision.gameObject.CompareTag("healthboost"))
+        {
+            HealthBoost();
+        }
+
+        if (collision.gameObject.CompareTag("DamageBoost"))
+        {
+            DamageBoost();
+        }
+
+        if (collision.gameObject.CompareTag("SpeedBoost"))
+        {
+            SpeedBoost();
+        }
+
     }
 
     void TakeDamage()
@@ -58,5 +74,23 @@ public class TakeDamageScript : MonoBehaviour
 
     void CheckPointReached() {
         Debug.Log("checkpoint reached!");
+    }
+
+    void HealthBoost()
+    {
+        //hp++ 
+        Debug.Log("I feel a bit better now");
+    }
+
+    void SpeedBoost()
+    {
+        //speed++ for 10 sec
+        Debug.Log("I am S P E E D");
+    }
+
+    void DamageBoost()
+    {
+        //damage ++ for 10 sec
+        Debug.Log("strongk");
     }
 }
