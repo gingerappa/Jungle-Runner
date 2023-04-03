@@ -36,12 +36,19 @@ public class TakeDamageScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        TakeDamage();
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            TakeDamage();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        CheckPointReached();
+        if (collision.gameObject.CompareTag("Checkpoint"))
+        {
+            CheckPointReached();
+        }
+        
     }
 
     void TakeDamage()
@@ -49,7 +56,7 @@ public class TakeDamageScript : MonoBehaviour
         Debug.Log("Ouch");
     }
 
-    void CheckPointReached() { 
-    
+    void CheckPointReached() {
+        Debug.Log("checkpoint reached!");
     }
 }
